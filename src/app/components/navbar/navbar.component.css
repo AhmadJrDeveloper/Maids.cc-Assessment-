@@ -1,0 +1,59 @@
+.navbar-container {
+  width: 100%;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.navbar-img {
+  width: 3rem;
+}
+
+.navbar-title {
+  color: #3f69b3;
+  padding-top: 1rem;
+}
+
+.navbar-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 17rem;
+  cursor: pointer;
+}
+
+.filter-icon {
+  padding-right: 10px;
+  color: white;
+}
+
+.filter-input {
+  width: auto;
+  height: 3rem;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 5px;
+  color: #3f69b3;
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+.filter-input:focus {
+  outline: none;
+  border:2px solid #3f69b3;
+  color: #3f69b3;
+}
+
+.filter-input::placeholder {
+  padding-left: 3px;
+  margin-top: 5rem;
+  font-size: 1rem;
+  color: #3f69b3;
+}
+@media (max-width: 768px) {
+  .filter-input {
+    width: 100%;
+  }
+  .navbar-info-container {
+    margin-right: 0;
+  }
+}

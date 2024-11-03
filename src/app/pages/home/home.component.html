@@ -1,0 +1,28 @@
+<div *ngIf="isLoading" class="loading-container">
+  <div class="loader"></div>
+  <p>Loading user details...</p>
+</div>
+
+<ng-container *ngIf="!isLoading">
+  <ng-container *ngIf="users.length > 0; else noData">
+    <app-card [users]="users"></app-card>
+    <mat-paginator
+      [length]="totalItems"
+      [pageSize]="pageSize"
+      (page)="onPageChange($event)"
+      style="background-color: #3f69b3"
+    ></mat-paginator>
+  </ng-container>
+
+  <ng-template #noData>
+    <div class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <mat-paginator
+      [length]="totalItems"
+      [pageSize]="pageSize"
+      (page)="onPageChange($event)"
+      style="background-color: #3f69b3"
+    ></mat-paginator>
+  </ng-template>
+</ng-container>

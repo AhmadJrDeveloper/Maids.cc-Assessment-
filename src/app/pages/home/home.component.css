@@ -1,0 +1,62 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  .loader {
+    width: 40px;
+    aspect-ratio: 1;
+    --c: linear-gradient(#3f69b3 0 0);
+    --m: radial-gradient(farthest-side, #3f69b3 92%, #3f69b3);
+    background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+    background-size: 8px 12px, 8px 8px;
+    background-repeat: no-repeat;
+    animation: l17 1s infinite linear;
+  }
+  @keyframes l17 {
+    0%,
+    5% {
+      background-position: 0 50%, 0 0, 50% 50%, 50% 0, 100% 50%, 100% 0;
+    }
+    12.5% {
+      background-position: 0 50%, 0 calc(50% - 10px), 50% 50%, 50% 0, 100% 50%,
+        100% 0;
+    }
+    25% {
+      background-position: 0 calc(50% + 10px), 0 50%, 50% 50%, 50% 0, 100% 50%,
+        100% 0;
+    }
+    37.5% {
+      background-position: 0 calc(50% + 10px), 0 50%, 50% 50%,
+        50% calc(50% - 10px), 100% 50%, 100% 0;
+    }
+    50% {
+      background-position: 0 50%, 0 0, 50% calc(50% + 10px), 50% 50%, 100% 50%,
+        100% 0;
+    }
+    62.5% {
+      background-position: 0 50%, 0 0, 50% calc(50% + 10px), 50% 50%, 100% 50%,
+        100% calc(50% - 10px);
+    }
+    75% {
+      background-position: 0 50%, 0 0, 50% 50%, 50% 0, 100% calc(50% + 10px),
+        100% 50%;
+    }
+    87.5% {
+      background-position: 0 50%, 0 0, 50% 50%, 50% 0, 100% calc(50% + 10px),
+        100% 50%;
+    }
+    95%,
+    100% {
+      background-position: 0 50%, 0 0, 50% 50%, 50% 0, 100% 50%, 100% 0;
+    }
+  }
+
+  .error-message {
+    text-align: center; 
+    font-size: 1.5em;
+    color: black; 
+    margin: 20px 0; 
+  }

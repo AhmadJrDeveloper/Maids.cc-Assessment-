@@ -1,0 +1,54 @@
+<div class="user-detail-container" *ngIf="user">
+    <div class="title-container">
+      <img
+        src="../../../assets/user_icon.png"
+        alt="user-icon"
+        class="user-icon"
+      />
+      <h2>User Details</h2>
+      <button mat-icon-button [routerLink]="['']" aria-label="Back">
+        <mat-icon>arrow_back</mat-icon> <!-- Back Arrow Icon -->
+      </button>
+    </div>
+    <div class="user-card">
+      <div class="img-header">
+        <img
+          [src]="user.avatar"
+          alt="{{ user.first_name }} {{ user.last_name }}"
+          class="user-img"
+        />
+      </div>
+      <div class="info-container">
+        <div class="user-info">
+          <p class="user-name">
+            <strong>Name:</strong>
+            {{ user.first_name }} {{ user.last_name }}
+          </p>
+          <p class="user-email">
+            <strong>Email:</strong>
+            <a [href]="'mailto:' + user.email">{{ user.email }}</a>
+          </p>
+          <p class="user-phone"><strong>Phone:</strong> {{ user.phone }}</p>
+          <p class="user-username">
+            <strong>Username:</strong> {{ user.username }}
+          </p>
+        </div>
+      </div>
+      <div class="custom-divider"></div>
+  
+      <div *ngIf="userDetail" class="user-detail">
+        <p class="user-detail-1"><strong>Some Detail:</strong> {{ userDetail.text }}</p>
+        <p class="user-detail-1"><strong>Some Detail:</strong> {{ userDetail.url }}</p>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill="#3f69b3" fill-opacity="1" d="M0,192L40,208C80,224,160,256,240,229.3C320,203,400,117,480,112C560,107,640,181,720,218.7C800,256,880,256,960,224C1040,192,1120,128,1200,128C1280,128,1360,192,1400,224L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+  
+  <div *ngIf="isLoading" class="loading-container">
+      <div class="loader"></div>
+      <p>Loading user details...</p>
+  </div>
+  

@@ -1,0 +1,16 @@
+<mat-toolbar class="navbar-container">
+  <div class="navbar-info-container" [routerLink]="['/']">
+    <img src="../../../assets/Maids.png" alt="Maids-img" class="navbar-img" />
+    <p class="navbar-title">User Dashboard</p>
+  </div>
+  <span class="spacer"></span>
+  
+  <div class="input-container">
+    <input
+      type="text"
+      placeholder="Search User by ID"
+      class="filter-input"
+      [(ngModel)]="value"
+      (ngModelChange)="onSearchChange()" />
+  </div>
+</mat-toolbar>
