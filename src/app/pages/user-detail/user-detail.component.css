@@ -113,17 +113,15 @@
   height: 100vh;
 }
 
-::ng-deep .custom-spinner .mat-progress-spinner-circle {
-  stroke: #3f69b3;
-}
 .mat-icon-button {
-  color: #3f69b3;
-  margin-left: 16px; 
+  color: #3f69b3 !important;
+  background-color: #3f69b3 !important;
+  margin-left: 16px;
   transition: background-color 0.2s ease;
 }
 
 .mat-icon-button:hover {
-  background-color: rgba(63, 105, 179, 0.1); 
+  background-color: rgba(63, 105, 179, 0.1);
 }
 .loader {
   width: 40px;
@@ -226,5 +224,59 @@
     padding-left: 0;
     padding-top: 1rem;
     gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .user-detail-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .user-card {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  .user-img {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .custom-divider {
+    width: 90%;
+    height: 8px;
+    margin: 10px 0;
+  }
+
+  .user-info {
+    gap: 0.5rem;
+  }
+
+  .user-detail {
+    width: 90%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .info-container {
+    height: auto;
+    gap: 0.5rem;
+    width: 40rem;
+  }
+
+  .title-container {
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .user-img {
+    width: 28rem;
+  }
+  .user-detail {
+    margin-top: 2rem;
+    width: 37rem;
   }
 }
